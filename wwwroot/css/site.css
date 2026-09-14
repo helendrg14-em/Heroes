@@ -1,0 +1,136 @@
+:root {
+    --rosa: #ffb7c3;
+    --rosa-suave: #e8c1c5;
+    --gris-calido: #d4ccc7;
+    --verde-salvia: #a4c3b2;
+    --menta: #bcf4de;
+    --texto: #49363c;
+    --texto-suave: #8b7975;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(255, 183, 195, 0.18), rgba(188, 244, 222, 0.18));
+    color: var(--texto);
+    font-family: "Nunito Sans", "Segoe UI", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    color: var(--texto);
+}
+
+.navbar {
+    background-color: #fff !important;
+    border-bottom: 1px solid var(--gris-calido) !important;
+}
+
+    .navbar .nav-link {
+        font-weight: 600;
+        color: var(--texto-suave) !important;
+        border-radius: 999px;
+        padding: 0.4rem 0.9rem !important;
+    }
+
+        .navbar .nav-link:hover {
+            background: var(--rosa-suave);
+            color: var(--texto) !important;
+        }
+
+.navbar-brand {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color: var(--texto) !important;
+}
+
+.btn-primary {
+    background-color: var(--verde-salvia) !important;
+    border: none !important;
+    color: var(--texto) !important;
+    border-radius: 14px;
+    font-weight: 600;
+}
+
+    .btn-primary:hover {
+        background-color: var(--menta) !important;
+    }
+
+.btn-warning, a.btn-outline-secondary {
+    background-color: var(--rosa-suave) !important;
+    border: none !important;
+    color: var(--texto) !important;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+    .btn-warning:hover {
+        background-color: var(--rosa) !important;
+    }
+
+.btn-danger {
+    background-color: var(--texto) !important;
+    border: none !important;
+    color: #fff !important;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.table thead th {
+    background-color: var(--verde-salvia);
+    color: var(--texto);
+    border: none;
+    padding: 14px 16px;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: rgba(232, 193, 197, 0.14);
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: rgba(188, 244, 222, 0.08);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 183, 195, 0.18);
+}
+
+.form-control, .form-select {
+    border: 1.5px solid var(--gris-calido);
+    border-radius: 12px;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: var(--rosa);
+        box-shadow: 0 0 0 3px rgba(255, 183, 195, 0.35);
+    }
+.table td a {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-right: 4px;
+    transition: opacity 0.15s ease;
+}
+
+    .table td a:hover {
+        text-decoration: none;
+        opacity: 0.85;
+    }
+
+    /* Edit, Details, Delete en ese orden (así los genera el scaffolder) */
+    .table td a:nth-of-type(1) {
+        background-color: var(--rosa-suave);
+        color: var(--texto);
+    }
+
+    .table td a:nth-of-type(2) {
+        background-color: var(--menta);
+        color: var(--texto);
+    }
+
+    .table td a:nth-of-type(3) {
+        background-color: var(--texto);
+        color: #fff;
+    }
