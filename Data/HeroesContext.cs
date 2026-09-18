@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using HeroesWeb.Models;
+﻿using HeroesWeb.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HeroesWeb.Data;
@@ -20,14 +18,18 @@ public partial class HeroesContext : DbContext
     {
         modelBuilder.Entity<Heroes>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Heroes__3214EC0782779D7A");
+            entity.HasKey(e => e.Id)
+                .HasName("PK__Heroes__3214EC0782779D7A");
         });
 
         modelBuilder.Entity<SuperPoderes>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SuperPod__3214EC071828E90B");
+            entity.HasKey(e => e.Id)
+                .HasName("PK_SuperPoderes");
 
-            entity.HasOne(d => d.Heroe).WithMany(p => p.SuperPoderes).HasConstraintName("FK_SuperPoderes_Heroes");
+            entity.HasOne(d => d.Heroe)
+                .WithMany(p => p.SuperPoderes)
+                .HasConstraintName("FK_SuperPoderes_Heroes");
         });
 
         OnModelCreatingPartial(modelBuilder);
